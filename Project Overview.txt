@@ -1,0 +1,193 @@
+📋 Master Checklist
+✅ Completed
+
+ MCP Server project initialized in Cursor
+
+ Python 3.13 + virtual environment configured
+
+ Supabase project created (Pro Plan + IPv4)
+
+ Database connected successfully to Retool
+
+ “Client Visibility Metrics” dashboard created
+
+ First data query live and tested
+
+ .env variables structured and updated
+
+ Orchestrator agent defined (baseline complete)
+
+ Guardrail system created for Supabase spend
+
+🧱 In Progress
+
+ Supabase table schema finalization
+
+clients, visibility_metrics, recommendations, llm_results, feedback
+
+ Retool dashboard visualization (cards, charts, summaries)
+
+ Integrate Ahrefs + Google Search Console APIs
+
+ Codex agent updates for SEO + LLM data fetch
+
+ Dashboard layout & data filters (client-specific view)
+
+🔜 Next Milestones
+Phase	Deliverable	Owner	Notes
+1. Metrics Pipeline	Configure Ahrefs + Search Console connectors	Alicia / Chat	Will feed visibility_metrics
+2. LLM Visibility Engine	Build agent that simulates “AI search” results	Alicia / Chat	Extend MCP + Codex logic
+3. Reporting Layer	Create automated weekly insight reports (email + dashboard)	Chat / Retool	Use Gmail API or SendGrid
+4. Client Dashboard Delivery	Create public or embedded version for clients	Alicia	Optional: embed in GoDaddy
+5. AI Summary Templates	Write custom LLM prompts for insight generation	Chat	Use GPT-4 + Claude templates
+6. SEO / LLM Hybrid Scoring Model	Develop unified visibility score per client	Chat	Combines metrics + LLM mentions
+💰 Estimated Ongoing Monthly Cost Summary
+Category	Tool	Cost
+Database	Supabase Pro + IPv4	$33
+Dashboard	Retool	Free (Pro if scaling)
+SEO Data	Ahrefs	$99+
+AI / LLM API	OpenAI + Claude	~$15–30
+Automation	Zapier / n8n	$20
+Total	≈ $165/month (scalable)	
+Goal:
+Create an end-to-end AI-driven system that measures, improves, and reports business visibility across traditional SEO (Google) and emerging LLM / AI search discovery (ChatGPT, Claude, Gemini, Perplexity).
+
+This includes:
+
+Automated data ingestion (from Ahrefs, analytics, and LLM signals)
+
+Centralized metrics tracking (via Supabase)
+
+Live visibility dashboards (via Retool)
+
+Client-facing insights + recommendations
+
+MCP-powered orchestration between agents
+
+⚙️ System Architecture (Tech Stack)
+| Layer                    | Tool / Platform                                                        | Purpose                                                                                     | Cost                                   |
+| ------------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | -------------------------------------- |
+| **Database**             | Supabase (Postgres)                                                    | Central data store for clients, metrics, recommendations, and agent logs                    | ~$29/mo (Pro + IPv4)                   |
+| **App Builder / UI**     | Retool                                                                 | Internal dashboard for metrics visualization & AI recommendations                           | Included (cloud version free to start) |
+| **Server / Logic Layer** | MCP Server (Claude/OpenAI integration)                                 | Coordinates agent workflows (fetch metrics, analyze data, summarize, write recommendations) | Free (self-hosted)                     |
+| **Frontend Hosting**     | GoDaddy (AI Design Solutions website)                                  | Optional client access dashboard (via embed or link)                                        | Existing                               |
+| **Data / SEO Sources**   | Ahrefs + others (e.g., Semrush, BrightData, Google Search Console API) | Pulls SEO & visibility metrics                                                              | $99+ depending on plan                 |
+| **AI Analysis**          | OpenAI GPT-4 / Claude 3.5 / Gemini                                     | Generates summaries, insight narratives, and visibility scores                              | ~$0.01–0.10 per 1k tokens              |
+| **Automation**           | Make.com / Zapier / n8n                                                | Scheduled data pulls, Supabase updates, email reports                                       | $10–30/mo estimated                    |
+
+🤖 Codex / MCP Agents (Active + Planned)
+| Agent Name                   | Purpose                                                                    | Frequency                        | Source / Output                    |
+| ---------------------------- | -------------------------------------------------------------------------- | -------------------------------- | ---------------------------------- |
+| **Orchestrator Agent**       | Controls sequence of all other agents, ensures data flow integrity         | Continuous (triggered on update) | Reads from Supabase, writes logs   |
+| **SEO Metrics Agent**        | Pulls metrics from Ahrefs, BrightData, and other APIs                      | Daily or weekly                  | Writes to `visibility_metrics`     |
+| **LLM Discovery Agent**      | Simulates AI agent queries in ChatGPT/Claude/Perplexity to test visibility | Weekly                           | Writes to `llm_visibility_results` |
+| **Recommendation Agent**     | Analyzes trends, suggests optimizations, writes insights                   | Weekly                           | Writes to `recommendations`        |
+| **Reporting Agent**          | Formats dashboard summaries + sends scheduled email updates                | Weekly                           | Exports from Supabase → Gmail      |
+| **Feedback Agent (planned)** | Collects client responses & tracks follow-up actions                       | Ad hoc                           | Writes to `client_feedback`        |
+
+🧱 Core Components + Deliverables
+| Component                       | Description                                                | Status                                     |
+| ------------------------------- | ---------------------------------------------------------- | ------------------------------------------ |
+| **MCP Server**                  | Local orchestrator running Codex agents                    | 🟢 Functional (base architecture complete) |
+| **Supabase Database**           | Central data storage with IPv4 + Pro plan                  | 🟢 Connected and secure                    |
+| **Retool Dashboard**            | “Client Visibility Metrics” internal app                   | 🟢 Created and live                        |
+| **Client Interface (Future)**   | Read-only dashboard or embedded client view                | 🟡 Planned                                 |
+| **Ahrefs / SEO Integration**    | Pull keyword, backlink, domain rating, and traffic metrics | 🔜 Next major integration                  |
+| **LLM Visibility Engine**       | Test appearance in LLM / AI agent results                  | 🟡 MVP under development                   |
+| **Email Report Templates**      | Automated weekly client updates (from Supabase → Gmail)    | 🔜 In design                               |
+| **Analytics Summary Generator** | AI summary for each client (recommendations, insights)     | 🔜 To be trained using Codex               |
+| **API Credentials Management**  | Secure `.env` and access key rotation                      | 🟢 Configured and verified                 |
+
+🧭 System Architecture Overview
+1️⃣ Client Data + External APIs
+
+Sources:
+
+Ahrefs / Semrush → SEO metrics
+
+Google Search Console → impressions, clicks, CTR
+
+LLMs (ChatGPT, Claude, Perplexity) → visibility tests
+
+Automation Tools:
+
+Make.com / n8n → fetch + format data
+
+→ Output: pushed into Supabase via API
+
+2️⃣ Supabase (PostgreSQL Backend)
+
+Tables:
+
+clients — business info
+
+visibility_metrics — daily/weekly metrics
+
+recommendations — AI-generated optimization advice
+
+llm_results — results of AI search checks
+
+feedback — client responses & follow-ups
+
+→ Feeds all downstream dashboards and reports
+
+3️⃣ MCP Server (Command & Coordination)
+
+Hosts your Codex Agents, which:
+
+Fetch metrics (SEO Metrics Agent)
+
+Query LLMs (LLM Visibility Agent)
+
+Generate summaries (Recommendation Agent)
+
+Send updates (Reporting Agent)
+
+Controlled by the Orchestrator Agent
+
+→ Communicates bi-directionally with Supabase using environment-secured keys
+
+4️⃣ Retool (Internal Dashboard)
+
+App: Client Visibility Metrics
+
+Displays:
+
+Client metrics overview
+
+Trend charts & visibility scores
+
+AI recommendations (from Supabase)
+
+Used internally for strategy, QA, and reporting
+
+→ Accessible only by AI Design Solutions team
+
+5️⃣ Client Deliverables
+
+Output channels:
+
+Weekly email summaries (via Gmail API or SendGrid)
+
+Optional read-only dashboard link (Retool embed or GoDaddy portal)
+
+PDF or slide exports for client meetings
+
+6️⃣ Future Expansion
+
+Advertising management (optional next module)
+
+Real-time performance alerts
+
+AI-generated client proposals and renewal reports
+
+⚙️ Tech Stack Summary
+| Layer      | Tool                       | Function              |
+| ---------- | -------------------------- | --------------------- |
+| Data       | Supabase                   | Secure database       |
+| AI Logic   | MCP Server (Claude/OpenAI) | Agent orchestration   |
+| Dashboard  | Retool                     | Data visualization    |
+| SEO APIs   | Ahrefs, Semrush, GSC       | Metric ingestion      |
+| Automation | Make.com / n8n             | Scheduling & triggers |
+| Output     | Gmail, PDF, GoDaddy        | Client communication  |
+

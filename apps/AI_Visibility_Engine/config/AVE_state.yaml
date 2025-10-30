@@ -1,0 +1,11 @@
+# /config/AVE_state.yaml
+phase: 1
+human_approval_flag: true
+active_agents:
+  - dev
+  - automation
+  - analytics
+owner: alicia@aidesignsolutions.net
+cron:
+  weekly_digest: true
+  monthly_summary: true

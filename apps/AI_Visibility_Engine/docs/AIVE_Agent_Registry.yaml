@@ -1,0 +1,163 @@
+# ======================================================
+# AI Visibility Engine — Agent Registry (v1.0)
+# ======================================================
+
+- agent_id: A1
+  agent_name: Strategy Agent
+  phase_ownership: 1–5
+  role: Product roadmap, pricing tiers, and feature evolution.
+  key_inputs:
+    - Market research data
+    - Analytics summaries
+  core_outputs:
+    - Roadmap updates
+    - Tiered pricing model
+  dependencies: [A4, A6]
+  commands:
+    - analyze_market
+    - update_roadmap
+    - define_tiers
+  output_path: /data/strategy/roadmap_{timestamp}.yaml
+
+- agent_id: A2
+  agent_name: Dev Agent
+  phase_ownership: 1–5
+  role: Generate, test, and publish AI profile pages and deployment scripts.
+  key_inputs:
+    - Intake JSON payload
+    - Approval flag
+  core_outputs:
+    - Live HTML pages
+    - Deployment logs
+  dependencies: [A3, A7]
+  commands:
+    - generate_html
+    - publish
+    - validate_deploy
+  output_path: /deploy/{slug}/index.html
+
+- agent_id: A3
+  agent_name: Automation Agent
+  phase_ownership: 1–5
+  role: Automate workflows between intake, generation, approval, and publishing.
+  key_inputs:
+    - Typeform/Cursor form data
+    - Client metadata
+  core_outputs:
+    - Normalized payloads
+    - API triggers
+    - Automation logs
+  dependencies: [A2, A4]
+  commands:
+    - normalize_data
+    - trigger_publish
+    - log_event
+  output_path: /data/intake/{client_id}.json
+
+- agent_id: A4
+  agent_name: Analytics Agent
+  phase_ownership: 1–5
+  role: Track visibility metrics, LLM query results, and engagement data.
+  key_inputs:
+    - GA4 data
+    - LLM query logs
+    - Baseline test results
+  core_outputs:
+    - Weekly and monthly reports
+    - Proof metric data
+    - Visibility deltas
+  dependencies: [A3, A1]
+  commands:
+    - track_metrics
+    - calculate_visibility
+    - generate_report
+  output_path: /reports/weekly_digest.md
+
+- agent_id: A5
+  agent_name: Content Agent
+  phase_ownership: 3–5
+  role: Create copy, educational PDFs, and visuals for the AI Visibility Engine.
+  key_inputs:
+    - Business profile data
+    - Visual templates
+    - Service descriptions
+  core_outputs:
+    - Landing page text
+    - Marketing PDFs
+    - Explainer scripts
+  dependencies: [A1, A6]
+  commands:
+    - create_copy
+    - build_pdf
+    - generate_visuals
+  output_path: /content/{client_slug}/materials/
+
+- agent_id: A6
+  agent_name: Education Agent
+  phase_ownership: 3–5
+  role: Research and generate marketing and educational material on AI Visibility.
+  key_inputs:
+    - LLM search models
+    - SEO + Similarweb data
+  core_outputs:
+    - Marketing brochures
+    - Educational summaries
+    - Search comparison reports
+  dependencies: [A4, A5]
+  commands:
+    - analyze_visibility_gaps
+    - generate_llm_vs_google_report
+    - draft_marketing_copy
+  output_path: /education/reports/{timestamp}.md
+
+- agent_id: A7
+  agent_name: Governance Agent
+  phase_ownership: 1–5
+  role: Oversee data integrity, compliance, and operational governance.
+  key_inputs:
+    - Agent activity logs
+    - Supabase audit data
+  core_outputs:
+    - Governance events
+    - Review summaries
+    - Compliance logs
+  dependencies: [A3, A8]
+  commands:
+    - validate_action
+    - record_approval
+    - flag_anomaly
+  output_path: /logs/governance/{timestamp}.json
+
+- agent_id: A8
+  agent_name: Orchestrator Agent
+  phase_ownership: 1–5
+  role: Coordinate execution of all agents and maintain system-wide visibility.
+  key_inputs:
+    - Client registry
+    - Agent configurations
+  core_outputs:
+    - Orchestration logs
+    - Process execution summaries
+  dependencies: [A1, A9]
+  commands:
+    - orchestrate_all_clients
+    - execute_pipeline
+    - log_system_status
+  output_path: /logs/orchestration/{timestamp}.log
+
+- agent_id: A9
+  agent_name: Research Intelligence Agent
+  phase_ownership: 4–5
+  role: Analyze market data, competitor trends, and AI model search behavior.
+  key_inputs:
+    - Similarweb data
+    - DataForSEO / LLM query comparisons
+  core_outputs:
+    - Research insights
+    - AI visibility predictions
+  dependencies: [A4, A6]
+  commands:
+    - fetch_research_data
+    - analyze_trends
+    - propose_adjustments
+  output_path: /research/insights/{timestamp}.json

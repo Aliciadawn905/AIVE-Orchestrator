@@ -1,0 +1,116 @@
+2025-10-26 18:27:09.662 | ERROR    | __main__:<module>:36 - ❌ Missing environment variable: SUPABASE_KEY
+2025-10-26 18:27:09.662 | ERROR    | __main__:<module>:36 - ❌ Missing environment variable: OPENAI_API_KEY
+2025-10-26 18:27:09.662 | ERROR    | __main__:<module>:36 - ❌ Missing environment variable: ANTHROPIC_API_KEY
+2025-10-26 18:27:09.663 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A1_data_ingest_agent: No module named 'apps.AI_Visibility_Engine.agents.A1_data_ingest_agent'
+2025-10-26 18:27:09.663 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A2_llm_visibility_agent: No module named 'apps.AI_Visibility_Engine.agents.A2_llm_visibility_agent'
+2025-10-26 18:27:09.663 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A3_seo_metrics_agent: No module named 'apps.AI_Visibility_Engine.agents.A3_seo_metrics_agent'
+2025-10-26 18:27:10.782 | INFO     | __main__:<module>:59 - ✅ Imported: apps.AI_Visibility_Engine.agents.A4_analytics_agent
+2025-10-26 18:27:10.782 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A5_recommendation_agent: No module named 'apps.AI_Visibility_Engine.agents.A5_recommendation_agent'
+2025-10-26 18:27:10.783 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A6_reporting_agent: No module named 'apps.AI_Visibility_Engine.agents.A6_reporting_agent'
+2025-10-26 18:27:10.783 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A7_feedback_agent: No module named 'apps.AI_Visibility_Engine.agents.A7_feedback_agent'
+2025-10-26 18:27:11.037 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A8_orchestrator_agent: supabase_key is required
+2025-10-26 18:27:11.039 | INFO     | __main__:<module>:59 - ✅ Imported: apps.AI_Visibility_Engine.agents.A9_research_intelligence_agent
+2025-10-26 18:27:11.039 | INFO     | __main__:<module>:73 - ✅ Library loaded: supabase
+2025-10-26 18:27:11.161 | INFO     | __main__:<module>:73 - ✅ Library loaded: openai
+2025-10-26 18:27:11.184 | INFO     | __main__:<module>:73 - ✅ Library loaded: anthropic
+2025-10-26 18:27:21.546 | INFO     | __main__:<module>:73 - ✅ Library loaded: pandas
+2025-10-26 18:27:21.546 | INFO     | __main__:<module>:73 - ✅ Library loaded: requests
+2025-10-26 18:27:21.547 | INFO     | __main__:<module>:73 - ✅ Library loaded: httpx
+2025-10-26 18:27:21.547 | WARNING  | __main__:<module>:90 - ⚠️ Supabase connection failed: supabase_key is required
+2025-10-26 18:27:21.547 | INFO     | __main__:<module>:94 - Environment verification completed at 2025-10-26 18:27:21.547273.
+
+2025-10-26 18:50:04.228 | INFO     | __main__:<module>:39 - ✅ All required environment variables loaded.
+2025-10-26 18:50:04.229 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A1_data_ingest_agent: No module named 'apps.AI_Visibility_Engine.agents.A1_data_ingest_agent'
+2025-10-26 18:50:04.229 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A2_llm_visibility_agent: No module named 'apps.AI_Visibility_Engine.agents.A2_llm_visibility_agent'
+2025-10-26 18:50:04.229 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A3_seo_metrics_agent: No module named 'apps.AI_Visibility_Engine.agents.A3_seo_metrics_agent'
+2025-10-26 18:50:04.367 | INFO     | __main__:<module>:59 - ✅ Imported: apps.AI_Visibility_Engine.agents.A4_analytics_agent
+2025-10-26 18:50:04.367 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A5_recommendation_agent: No module named 'apps.AI_Visibility_Engine.agents.A5_recommendation_agent'
+2025-10-26 18:50:04.367 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A6_reporting_agent: No module named 'apps.AI_Visibility_Engine.agents.A6_reporting_agent'
+2025-10-26 18:50:04.367 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A7_feedback_agent: No module named 'apps.AI_Visibility_Engine.agents.A7_feedback_agent'
+2025-10-26 18:50:04.939 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A8_orchestrator_agent: No module named 'agents'
+2025-10-26 18:50:04.942 | INFO     | __main__:<module>:59 - ✅ Imported: apps.AI_Visibility_Engine.agents.A9_research_intelligence_agent
+2025-10-26 18:50:04.943 | INFO     | __main__:<module>:73 - ✅ Library loaded: supabase
+2025-10-26 18:50:05.084 | INFO     | __main__:<module>:73 - ✅ Library loaded: openai
+2025-10-26 18:50:05.105 | INFO     | __main__:<module>:73 - ✅ Library loaded: anthropic
+2025-10-26 18:50:06.357 | INFO     | __main__:<module>:73 - ✅ Library loaded: pandas
+2025-10-26 18:50:06.358 | INFO     | __main__:<module>:73 - ✅ Library loaded: requests
+2025-10-26 18:50:06.358 | INFO     | __main__:<module>:73 - ✅ Library loaded: httpx
+2025-10-26 18:50:07.002 | INFO     | __main__:<module>:87 - ✅ Supabase connection successful.
+2025-10-26 18:50:07.002 | INFO     | __main__:<module>:94 - Environment verification completed at 2025-10-26 18:50:07.002741.
+
+2025-10-26 19:09:05.318 | INFO     | __main__:<module>:39 - ✅ All required environment variables loaded.
+2025-10-26 19:09:05.321 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A1_data_ingest_agent: No module named 'apps.AI_Visibility_Engine.agents.A1_data_ingest_agent'
+2025-10-26 19:09:05.322 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A2_llm_visibility_agent: No module named 'apps.AI_Visibility_Engine.agents.A2_llm_visibility_agent'
+2025-10-26 19:09:05.322 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A3_seo_metrics_agent: No module named 'apps.AI_Visibility_Engine.agents.A3_seo_metrics_agent'
+2025-10-26 19:09:05.473 | INFO     | __main__:<module>:59 - ✅ Imported: apps.AI_Visibility_Engine.agents.A4_analytics_agent
+2025-10-26 19:09:05.473 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A5_recommendation_agent: No module named 'apps.AI_Visibility_Engine.agents.A5_recommendation_agent'
+2025-10-26 19:09:05.473 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A6_reporting_agent: No module named 'apps.AI_Visibility_Engine.agents.A6_reporting_agent'
+2025-10-26 19:09:05.474 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A7_feedback_agent: No module named 'apps.AI_Visibility_Engine.agents.A7_feedback_agent'
+2025-10-26 19:09:05.859 | ERROR    | __main__:<module>:63 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A8_orchestrator_agent: No module named 'agents'
+2025-10-26 19:09:05.861 | INFO     | __main__:<module>:59 - ✅ Imported: apps.AI_Visibility_Engine.agents.A9_research_intelligence_agent
+2025-10-26 19:09:05.861 | INFO     | __main__:<module>:73 - ✅ Library loaded: supabase
+2025-10-26 19:09:05.993 | INFO     | __main__:<module>:73 - ✅ Library loaded: openai
+2025-10-26 19:09:06.022 | INFO     | __main__:<module>:73 - ✅ Library loaded: anthropic
+2025-10-26 19:09:06.638 | INFO     | __main__:<module>:73 - ✅ Library loaded: pandas
+2025-10-26 19:09:06.638 | INFO     | __main__:<module>:73 - ✅ Library loaded: requests
+2025-10-26 19:09:06.638 | INFO     | __main__:<module>:73 - ✅ Library loaded: httpx
+2025-10-26 19:09:07.793 | INFO     | __main__:<module>:87 - ✅ Supabase connection successful.
+2025-10-26 19:09:07.794 | INFO     | __main__:<module>:94 - Environment verification completed at 2025-10-26 19:09:07.794067.
+
+2025-10-26 19:17:19.543 | INFO     | __main__:<module>:39 - ✅ All required environment variables loaded.
+2025-10-26 19:17:19.544 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A1_strategy_agent
+2025-10-26 19:17:19.545 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A2_dev_agent
+2025-10-26 19:17:19.545 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A3_automation_agent
+2025-10-26 19:17:19.656 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A4_analytics_agent
+2025-10-26 19:17:19.656 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A5_content_agent
+2025-10-26 19:17:19.657 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A6_education_agent
+2025-10-26 19:17:19.657 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A7_governance_agent
+2025-10-26 19:17:19.923 | ERROR    | __main__:<module>:64 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A8_orchestrator_agent: No module named 'agents'
+2025-10-26 19:17:19.924 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A9_research_intelligence_agent
+2025-10-26 19:17:19.925 | INFO     | __main__:<module>:74 - ✅ Library loaded: supabase
+2025-10-26 19:17:20.032 | INFO     | __main__:<module>:74 - ✅ Library loaded: openai
+2025-10-26 19:17:20.054 | INFO     | __main__:<module>:74 - ✅ Library loaded: anthropic
+2025-10-26 19:17:20.459 | INFO     | __main__:<module>:74 - ✅ Library loaded: pandas
+2025-10-26 19:17:20.459 | INFO     | __main__:<module>:74 - ✅ Library loaded: requests
+2025-10-26 19:17:20.459 | INFO     | __main__:<module>:74 - ✅ Library loaded: httpx
+2025-10-26 19:17:21.587 | INFO     | __main__:<module>:88 - ✅ Supabase connection successful.
+2025-10-26 19:17:21.588 | INFO     | __main__:<module>:95 - Environment verification completed at 2025-10-26 19:17:21.588085.
+
+2025-10-26 19:27:04.305 | INFO     | __main__:<module>:39 - ✅ All required environment variables loaded.
+2025-10-26 19:27:04.306 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A1_strategy_agent
+2025-10-26 19:27:04.306 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A2_dev_agent
+2025-10-26 19:27:04.306 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A3_automation_agent
+2025-10-26 19:27:04.477 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A4_analytics_agent
+2025-10-26 19:27:04.477 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A5_content_agent
+2025-10-26 19:27:04.477 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A6_education_agent
+2025-10-26 19:27:04.479 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A7_governance_agent
+2025-10-26 19:27:04.541 | ERROR    | __main__:<module>:64 - ❌ Failed to import apps.AI_Visibility_Engine.agents.A8_orchestrator_agent: No module named 'A4_analytics_agent'
+2025-10-26 19:27:04.542 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A9_research_intelligence_agent
+2025-10-26 19:27:05.087 | INFO     | __main__:<module>:74 - ✅ Library loaded: supabase
+2025-10-26 19:27:05.252 | INFO     | __main__:<module>:74 - ✅ Library loaded: openai
+2025-10-26 19:27:05.274 | INFO     | __main__:<module>:74 - ✅ Library loaded: anthropic
+2025-10-26 19:27:06.503 | INFO     | __main__:<module>:74 - ✅ Library loaded: pandas
+2025-10-26 19:27:06.503 | INFO     | __main__:<module>:74 - ✅ Library loaded: requests
+2025-10-26 19:27:06.503 | INFO     | __main__:<module>:74 - ✅ Library loaded: httpx
+2025-10-26 19:27:07.365 | INFO     | __main__:<module>:88 - ✅ Supabase connection successful.
+2025-10-26 19:27:07.365 | INFO     | __main__:<module>:95 - Environment verification completed at 2025-10-26 19:27:07.365459.
+
+2025-10-26 19:30:16.753 | INFO     | __main__:<module>:39 - ✅ All required environment variables loaded.
+2025-10-26 19:30:16.754 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A1_strategy_agent
+2025-10-26 19:30:16.754 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A2_dev_agent
+2025-10-26 19:30:16.755 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A3_automation_agent
+2025-10-26 19:30:16.854 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A4_analytics_agent
+2025-10-26 19:30:16.855 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A5_content_agent
+2025-10-26 19:30:16.855 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A6_education_agent
+2025-10-26 19:30:16.856 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A7_governance_agent
+2025-10-26 19:30:17.129 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A8_orchestrator_agent
+2025-10-26 19:30:17.129 | INFO     | __main__:<module>:60 - ✅ Imported: apps.AI_Visibility_Engine.agents.A9_research_intelligence_agent
+2025-10-26 19:30:17.130 | INFO     | __main__:<module>:74 - ✅ Library loaded: supabase
+2025-10-26 19:30:17.239 | INFO     | __main__:<module>:74 - ✅ Library loaded: openai
+2025-10-26 19:30:17.261 | INFO     | __main__:<module>:74 - ✅ Library loaded: anthropic
+2025-10-26 19:30:17.658 | INFO     | __main__:<module>:74 - ✅ Library loaded: pandas
+2025-10-26 19:30:17.658 | INFO     | __main__:<module>:74 - ✅ Library loaded: requests
+2025-10-26 19:30:17.658 | INFO     | __main__:<module>:74 - ✅ Library loaded: httpx
+2025-10-26 19:30:18.495 | INFO     | __main__:<module>:88 - ✅ Supabase connection successful.
+2025-10-26 19:30:18.496 | INFO     | __main__:<module>:95 - Environment verification completed at 2025-10-26 19:30:18.496011.
+
