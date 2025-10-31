@@ -12,6 +12,15 @@ import time
 from pathlib import Path
 from dotenv import load_dotenv
 
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"status": "AIVE Orchestrator is running!"}
+
+
 # --------------------------------------------------------------------
 # 🧾 LOGGING CONFIGURATION
 # --------------------------------------------------------------------
