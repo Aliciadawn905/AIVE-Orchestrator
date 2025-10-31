@@ -1,2 +1,24 @@
 .env
 *.env
+env.*
+
+# Compiled / cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS & IDE files
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Virtual environments
+.venv/
+venv/
+.envrc
+
+# Local data
+*.db
+*.sqlite
