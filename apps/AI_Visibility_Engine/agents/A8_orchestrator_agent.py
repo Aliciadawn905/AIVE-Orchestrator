@@ -10,15 +10,44 @@ import sys
 import os
 import time
 import logging
-from datetime import datetime
+
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 from pathlib import Path
 from dotenv import load_dotenv
-from fastapi import FastAPI
+from datetime import datetime
+
+# ======================================================
+# 📡 Retool API Endpoints for Render
+# ======================================================
+app = FastAPI()
+
+
+@app.get("/clients")
+async def get_clients():
+    """Returns all clients from Supabase."""
+    try:
+        clients = fetch_client_list()
+        return JSONResponse({"clients": clients})
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+@app.post("/run_orchestration")
+async def trigger_orchestration(request: Request):
+    """Runs orchestration manually (triggered by Retool)."""
+    try:
+        body = await request.json()
+        client_id = body.get("client_id", "LOTUS001")  # default for testing
+        print(f"🧭 Manual orchestration triggered for client {client_id}")
+        orchestrate_all_clients()  # or a single-client version if you prefer
+        return JSONResponse({"status": "success", "client_id": client_id})
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
 
 # --------------------------------------------------------
 # 🔧 FastAPI Setup (for Render health checks + manual runs)
 # --------------------------------------------------------
-app = FastAPI()
 
 @app.get("/")
 def root():
