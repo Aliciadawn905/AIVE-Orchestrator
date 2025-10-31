@@ -46,3 +46,9 @@ def define_tiers(client_id: str):
     }
     print("📊 Tier definitions:", tiers)
     return tiers
+# apps/AI_Visibility_Engine/agents/A1_strategy_agent.py
+
+def run_a1_strategy():
+    print("Running A1 strategy agent...")
+    # logic here
+    return {"status": "success"}
