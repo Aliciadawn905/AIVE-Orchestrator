@@ -1,6 +1,8 @@
 """
 A1_Strategy_Agent.py
-Handles strategic insights, roadmap updates, and tier recommendations.
+Purpose: Handles strategic insights, roadmap updates, and tier recommendations.
+Analyzes overall brand and competitive visibility to generate high-level
+AI visibility strategy recommendations.
 """
 
 from datetime import datetime
@@ -48,7 +50,12 @@ def define_tiers(client_id: str):
     return tiers
 # apps/AI_Visibility_Engine/agents/A1_strategy_agent.py
 
-def run_a1_strategy():
-    print("Running A1 strategy agent...")
-    # logic here
-    return {"status": "success"}
+def run_a1_strategy(client_id: str, business_name: str, domain: str, industry: str):
+    print(f"🚀 [A1] Running Strategy Agent for {business_name} ({domain}) in {industry}")
+    # TODO: Replace with actual strategic analysis logic
+    strategy_plan = {
+        "focus_keywords": ["AI optimization", "local SEO", "content visibility"],
+        "recommended_tools": ["DataForSEO", "Similarweb", "Google Analytics"],
+        "summary": "Generated baseline AI visibility strategy."
+    }
+    return {"status": "success", "agent": "A1", "data": strategy_plan}
