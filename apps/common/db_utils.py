@@ -158,3 +158,26 @@ def fetch_client_list():
     except Exception as e:
         print(f"❌ Error fetching clients: {e}")
         return []
+
+
+def log_recommendation(client_id: str, domain: str, recommendation: str, source: str = "A6", notes: str = ""):
+    """
+    Logs content or educational recommendations into the Supabase recommendations table.
+    """
+    print(f"📝 [DB] Logging recommendation for {domain}: {recommendation}")
+
+    try:
+        from common.supabase_client import supabase  # or adjust if you import differently
+        data = {
+            "client_id": client_id,
+            "domain": domain,
+            "recommendation": recommendation,
+            "source": source,
+            "notes": notes
+        }
+        supabase.table("recommendations").insert(data).execute()
+        print("✅ Recommendation logged successfully.")
+        return True
+    except Exception as e:
+        print(f"⚠️ Failed to log recommendation: {e}")
+        return False
