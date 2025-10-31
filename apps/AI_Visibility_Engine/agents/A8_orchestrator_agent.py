@@ -16,13 +16,19 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 
 # --------------------------------------------------------
-# 🔧 FastAPI Setup (for Render health checks)
+# 🔧 FastAPI Setup (for Render health checks + manual runs)
 # --------------------------------------------------------
 app = FastAPI()
 
 @app.get("/")
 def root():
     return {"status": "AIVE Orchestrator is running!"}
+
+@app.get("/orchestrate")
+def trigger_orchestration():
+    """Manual trigger endpoint for orchestration runs."""
+    orchestrate_all_clients()
+    return {"status": "success", "message": "AIVE orchestration completed."}
 
 # --------------------------------------------------------
 # 🧾 Logging Setup
@@ -70,7 +76,7 @@ from apps.common.db_utils import (
 from apps.AI_Visibility_Engine.agents.A1_strategy_agent import run_a1_strategy
 from apps.AI_Visibility_Engine.agents.A2_dev_agent import run_a2_dev
 from apps.AI_Visibility_Engine.agents.A3_automation_agent import run_a3_automation
-from apps.AI_Visibility_Engine.agents.A4_analytics_agent import run_analysis
+from apps.AI_Visibility_Engine.agents.A4_analytics_agent import run_a4_analytics
 from apps.AI_Visibility_Engine.agents.A5_content_agent import run_a5_content
 from apps.AI_Visibility_Engine.agents.A6_education_agent import run_a6_education
 from apps.AI_Visibility_Engine.agents.A7_governance_agent import run_a7_governance
@@ -91,20 +97,21 @@ def orchestrate_all_clients():
         name = client.get("client_name", "Unknown")
         industry = client.get("industry", "Local Services")
 
+        print(f"\n--- Running AIVE orchestration for {name} ({domain}) ---\n")
         logging.info(f"🎯 Processing client: {name} ({domain})")
 
         try:
             # --- A1 Strategy & Planning ---
-            run_a1_strategy(client_id=cid, domain=domain, industry=industry)
+            run_a1_strategy(client_id=cid, business_name=name, domain=domain, industry=industry)
 
             # --- A2 Development & Infrastructure ---
-            run_a2_dev(client_id=cid, domain=domain)
+            run_a2_dev(client_id=cid, business_name=name, domain=domain, industry=industry)
 
             # --- A3 Automation & Workflows ---
-            run_a3_automation(client_id=cid, domain=domain)
+            run_a3_automation(client_id=cid, business_name=name, domain=domain, industry=industry)
 
             # --- A4 Analytics ---
-            result = run_analysis(domain)
+            result = run_a4_analytics(client_id=cid, business_name=name, domain=domain, industry=industry)
             if result:
                 log_visibility_metrics(
                     agent_id="A4",
@@ -117,18 +124,13 @@ def orchestrate_all_clients():
                 )
 
             # --- A5 Content & SEO ---
-            run_a5_content(client_id=cid, domain=domain)
+            run_a5_content(client_id=cid, business_name=name, domain=domain, industry=industry)
 
             # --- A6 Education (Marketing Content + Research Brochure) ---
-            run_a6_education(
-                client_id=cid,
-                business_name=name,
-                domain=domain,
-                industry=industry
-            )
+            run_a6_education(client_id=cid, business_name=name, domain=domain, industry=industry)
 
             # --- A7 Governance & Oversight ---
-            run_a7_governance(client_id=cid, domain=domain)
+            run_a7_governance(client_id=cid, business_name=name, domain=domain, industry=industry)
 
             # --- A9 Research & Intelligence ---
             propose_aive_updates()
