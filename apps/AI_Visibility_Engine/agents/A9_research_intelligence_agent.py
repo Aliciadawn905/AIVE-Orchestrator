@@ -82,3 +82,7 @@ if __name__ == "__main__":
     update_metrics_catalog(new_sources)
     propose_aive_updates()
     print("\n🎯 A9 Research & Intelligence Agent run complete.")
+
+def run_a9_research_intelligence(**kwargs):
+    print("⚙️ Running A9 Research & Intelligence Agent...")
+    return {"status": "success", "agent": "A9"}

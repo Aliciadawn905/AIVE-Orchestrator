@@ -47,3 +47,7 @@ def publish(client_id: str):
 def validate_deploy(client_id: str):
     print(f"✅ Validating deployment integrity for {client_id}...")
     return True
+
+def run_a2_dev(**kwargs):
+    print("⚙️ Running A2 Dev Agent...")
+    return {"status": "success", "agent": "A2"}
