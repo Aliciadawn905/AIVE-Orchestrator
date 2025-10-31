@@ -1,14 +1,14 @@
-# /apps/common/marketing_agent.py
+"""
+A6 Education Agent
+Purpose:
+Generates marketing and educational content for client visibility enhancement.
+"""
+
 import os
 from openai import OpenAI
 from datetime import datetime
 from apps.common.db_utils import log_content_output, log_recommendation, log_governance_event
 
-from apps.common.db_utils import (
-    log_content_output,
-    log_research_insight,
-    log_governance_event,
-)
 
 MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
