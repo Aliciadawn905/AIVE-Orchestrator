@@ -2,9 +2,9 @@
 import os
 from openai import OpenAI
 from datetime import datetime
-from common.db_utils import log_content_output, log_recommendation, log_governance_event
+from apps.common.db_utils import log_content_output, log_recommendation, log_governance_event
 
-from appscommon.db_utils import (
+from apps.common.db_utils import (
     log_content_output,
     log_research_insight,
     log_governance_event,
@@ -99,7 +99,7 @@ def a6_log_outputs(client_id: str, business_name: str, domain: str, industry: st
     )
 
 def run_a6_education(client_id: str, business_name: str, domain: str, industry: str):
-    data = a6_generate_research(business_name, domain, industry)
+    data = a6_generate_education(business_name, domain, industry)
     a6_log_outputs(client_id, business_name, domain, industry, data)
     return data
 
