@@ -15,7 +15,7 @@ ROOT_DIR = Path(__file__).resolve().parents[3]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-    
+
 import time
 import logging
 
@@ -67,6 +67,21 @@ def get_governance_logs():
         return JSONResponse({"data": logs})
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
+
+# ======================================================
+# 📊 Visibility Metrics Endpoint for Retool
+# ======================================================
+
+@app.get("/metrics")
+def get_metrics():
+    """Return visibility and performance metrics from Supabase."""
+    try:
+        from apps.common.db_utils import fetch_table_data
+        metrics = fetch_table_data("visibility_metrics")
+        return JSONResponse({"data": metrics})
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
+
 
 # --------------------------------------------------------
 # 🔧 FastAPI Setup (for Render health checks + manual runs)
