@@ -8,6 +8,14 @@ logs outputs to Supabase, and maintains client visibility metrics.
 
 import sys
 import os
+from pathlib import Path
+
+# --- Add project root to path so local imports work ---
+ROOT_DIR = Path(__file__).resolve().parents[3]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+    
 import time
 import logging
 
@@ -211,6 +219,20 @@ def orchestrate_all_clients():
     logging.info("✅ All clients processed successfully.")
     logging.info("🧠 Research & Intelligence updates complete.")
 
+# ======================================================
+# 🧭 Route Debugger (for Render visibility)
+# ======================================================
+if __name__ == "__main__":
+    import uvicorn
+    from fastapi.routing import APIRoute
+
+    print("\n🔍 Registered routes:")
+    for route in app.routes:
+        if isinstance(route, APIRoute):
+            print(f"➡️  {route.path}")
+
+    print("\n🚀 Starting FastAPI for local testing...\n")
+    uvicorn.run(app, host="0.0.0.0", port=10000)
 
 # --------------------------------------------------------
 # 🧩 Run when launched directly
