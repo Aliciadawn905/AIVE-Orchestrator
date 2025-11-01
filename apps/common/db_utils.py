@@ -181,3 +181,12 @@ def log_recommendation(client_id: str, domain: str, recommendation: str, source:
     except Exception as e:
         print(f"⚠️ Failed to log recommendation: {e}")
         return False
+
+def fetch_table_data(table_name: str):
+    """Fetch all records from a specified Supabase table."""
+    try:
+        response = supabase.table(table_name).select("*").execute()
+        return response.data
+    except Exception as e:
+        print(f"❌ Error fetching table {table_name}: {e}")
+        return []

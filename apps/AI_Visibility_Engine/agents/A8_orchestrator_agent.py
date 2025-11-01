@@ -13,6 +13,7 @@ import logging
 
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
+from apps.common.db_utils import fetch_client_list
 from pathlib import Path
 from dotenv import load_dotenv
 from datetime import datetime
@@ -44,6 +45,20 @@ async def trigger_orchestration(request: Request):
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
 
+# ======================================================
+# 🧾 Governance Events Endpoint for Retool
+# ======================================================
+from fastapi.responses import JSONResponse
+
+@app.get("/governance")
+def get_governance_logs():
+    """Return all governance events from Supabase for dashboard display."""
+    try:
+        from apps.common.db_utils import fetch_table_data
+        logs = fetch_table_data("governance_events")  # generic fetch helper in db_utils.py
+        return JSONResponse({"data": logs})
+    except Exception as e:
+        return JSONResponse({"error": str(e)}, status_code=500)
 
 # --------------------------------------------------------
 # 🔧 FastAPI Setup (for Render health checks + manual runs)
